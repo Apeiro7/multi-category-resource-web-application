@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Dark mode via .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(109, 40, 217, 0.4) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(109, 40, 217, 0.4);
+  border-radius: 99px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(109, 40, 217, 0.7);
+}
+
+/* Smooth transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selection */
+::selection {
+  background: rgba(109, 40, 217, 0.25);
+  color: inherit;
+}
+
+/* Light mode */
+:root {
+  background-color: #f8f8fc;
+  color: #111;
+}
+
+/* Dark mode root */
+:root.dark {
+  background-color: #0d0d1a;
+  color: #f1f1f1;
+}
+
+/* Remove default focus rings, custom ones via Tailwind */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(109, 40, 217, 0.7);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }

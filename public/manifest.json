@@ -1,0 +1,20 @@
+{
+  "name": "MyVault — Personal Resource Hub",
+  "short_name": "MyVault",
+  "description": "Your personal hub for Software, Anime, Videos, Courses, Tools and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#6d28d9",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "education", "productivity"],
+  "screenshots": []
+}
